@@ -12,7 +12,7 @@ function App() {
       setLoading(true);
 
       const res = await axios.post(
-        "https://your-backend-url.onrender.com/ticket",
+        "https://ai-ticketing-backend-7tli.onrender.com/ticket",
         { title, description },
         {
           headers: { "Content-Type": "application/json" },
