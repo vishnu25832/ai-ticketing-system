@@ -77,7 +77,7 @@ Frontend: https://ai-ticketing-system-psi.vercel.app/
 
 ### AI Response
 
-![Output]()
+![Output](Screenshot-Output.png)
 
 ---
 
