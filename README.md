@@ -73,13 +73,11 @@ Frontend: https://ai-ticketing-system-psi.vercel.app/
 
 ### Input Form
 
-![Input](<img width="1366" height="768" alt="Screenshot-Input" src="https://github.com/user-attachments/assets/d1cbd7bb-4c74-428a-bde3-1713d33cfd48" />
-)
+![Input](Screenshot-Input.png)
 
 ### AI Response
 
-![Output](<img width="1366" height="768" alt="Screenshot-Output" src="https://github.com/user-attachments/assets/66799bde-a946-4806-9751-5e99f67f26bb" />
-)
+![Output]()
 
 ---
 
