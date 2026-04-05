@@ -139,8 +139,6 @@ npm run dev
 
 ## 👨‍💻 Author
 
-Vishnu Vardhan
+Bachina Vishnu Vardhan
 
 ---
-
-Built as part of AI + Full Stack learning.
