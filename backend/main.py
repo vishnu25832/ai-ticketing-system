@@ -11,7 +11,7 @@ app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
-    allow_credentials=True,
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -32,7 +32,7 @@ def create_ticket(ticket: Ticket):
 
     text = (ticket.title + " " + ticket.description).lower()
 
-    # Rule-based classification
+    # ✅ RULE BASED (FAST + RELIABLE)
     if "login" in text or "password" in text:
         category = "Access"
         severity = "Medium"
@@ -46,11 +46,15 @@ def create_ticket(ticket: Ticket):
         category = "Other"
         severity = "Low"
 
-    summary = "Issue related to system functionality"
+    summary = "System issue"
 
-    # AI summary enhancement
+    # AI ONLY FOR SUMMARY
     try:
-        prompt = f"Summarize in ONE SHORT sentence (max 10 words): {ticket.title} - {ticket.description}"
+        prompt = f"""
+Summarize this in max 10 words:
+
+{ticket.title} - {ticket.description}
+"""
         response = client.chat.completions.create(
             model="llama-3.1-8b-instant",
             messages=[{"role": "user", "content": prompt}]
