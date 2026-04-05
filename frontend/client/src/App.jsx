@@ -11,10 +11,14 @@ function App() {
     try {
       setLoading(true);
 
-      const res = await axios.post("https://ai-ticketing-backend.onrender.com/ticket", {
-        title,
-        description,
-      });
+      const res = await axios.post(
+        "https://your-backend-url.onrender.com/ticket",
+        { title, description },
+        {
+          headers: { "Content-Type": "application/json" },
+          timeout: 30000,
+        }
+      );
 
       setAiResult(res.data.ai);
     } catch (error) {
