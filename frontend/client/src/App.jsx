@@ -11,7 +11,7 @@ function App() {
     try {
       setLoading(true);
 
-      const res = await axios.post("http://127.0.0.1:8000/ticket", {
+      const res = await axios.post("https://ai-ticketing-backend.onrender.com/ticket", {
         title,
         description,
       });
